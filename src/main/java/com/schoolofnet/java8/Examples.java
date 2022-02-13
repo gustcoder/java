@@ -17,5 +17,11 @@ public class Examples {
                 .filter(str -> str.startsWith("L"))
                 .toList();
         result.forEach(System.out::print);
+
+        // Java 7
+        Person.say("bla bla");
+
+        // Java 8
+        result.forEach(Person::say);
     }
 }
