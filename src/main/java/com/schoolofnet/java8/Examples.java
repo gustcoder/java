@@ -10,5 +10,12 @@ public class Examples {
         for (String str: list) {
             System.out.println(str);
         }
+
+        list.forEach(str -> System.out.println(str));
+
+        List<String> result = list.stream()
+                .filter(str -> str.startsWith("L"))
+                .toList();
+        result.forEach(System.out::print);
     }
 }
