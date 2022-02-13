@@ -14,5 +14,8 @@ public class Main {
         // using Lambda
         Runnable runWithLambda = () -> System.out.println("Java 8 With Lambda");
         new Thread(runWithLambda).start();
+
+        // Simplifying even more
+        new Thread(() -> System.out.println("Java 8 With Lambda Simplified"));
     }
 }
