@@ -1,7 +1,9 @@
 package com.schoolofnet.java8;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class Examples {
     public static void main(String... args) {
@@ -40,5 +42,23 @@ public class Examples {
         result.forEach(my1::print);
 
         my1.body();
+
+        // Optional
+        List<Person> people = new ArrayList<>();
+
+        Person person1 = new Person("Chris");
+        Person person2 = new Person("Jill");
+        Person person3 = new Person("Wesker");
+        Person person4 = new Person(null);
+
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+        people.add(person4);
+
+        Optional<Person> op = Optional.of(person1);
+        op.ifPresent(p -> System.out.println("Optional: " + p.getName()));
+
+        people.forEach(p -> System.out.println(p.getName()));
     }
 }
