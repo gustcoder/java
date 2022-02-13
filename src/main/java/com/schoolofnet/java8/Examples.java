@@ -38,5 +38,7 @@ public class Examples {
             System.out.println("Java 8 implementation Functional Interface: " + s);
         };
         result.forEach(my1::print);
+
+        my1.body();
     }
 }
